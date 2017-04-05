@@ -359,6 +359,9 @@ class CardXMLProcessor:
 			is_power = record["m_IsPowerKeywordTag"]
 			self.record_card_tag(dbf_id, tag, value, is_reference, is_power)
 
+		if "CARD_SET_TIMING" not in data:
+			return
+
 		current_events = [
 			"pre_set_rotation_2017"
 		]
